@@ -1,0 +1,107 @@
+:root {
+  --darkTheme: false;
+  --bgColorDay: rgb(238, 238, 238);
+  --bgColorNight: rgb(34, 51, 68);
+  --bgColor: var(--bgColorDay);
+
+  --textColorDay: rgb(0, 0, 0);
+  --textColorNight: rgb(255, 255, 255);
+  --textColor: var(--textColorDay);
+
+  --topbarColorDay: var(--textColorNight);
+  --topbarColorNight: rgb(24, 41, 58);
+  --topbarColor: var(--topbarColorDay);
+
+  --rowColorDay: var(--topbarColorDay);
+  --rowColorNight: var(--topbarColorNight);
+  --rowColor: var(--rowColorDay);
+
+  --rowHoverColorDay: rgb(32, 32, 170);
+  --rowHoverColorNight: rgb(170, 170, 255);
+  --rowHoverColor: var(--rowHoverColorDay);
+  
+  --textHoverColorDay: var(--textColorNight);
+  --textHoverColorNight: var(--textColorDay);
+  --textHoverColor: var(--textHoverColorDay);
+}
+
+body {
+    background-color: var(--bgColor);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--textColor);
+    margin: 0px;
+}
+
+.topbar {
+  height: 50px;
+  padding: 10px 30px;
+  background-color: var(--topbarColor);
+}
+
+.masterviewbox {
+  float: left;
+  width: 600px;
+  padding: 0px 20px;
+}
+
+.masterheader, .detailheader{
+  padding-left: 10px;
+}
+
+.masterheader {
+  cursor: pointer;
+}
+
+.mastertablebox {
+  height: 82vh;
+  overflow-y: auto;
+}
+
+.mastertable {
+  width: 100%;
+  padding-right: 20px;
+}
+
+.detailviewbox {
+  float:left;
+  width: 600px;
+}
+
+.detailtable {
+  width: 100%;
+}
+
+.dtcolheader {
+  font-size: 150%;
+  padding: 10px;
+}
+
+.dtrowheader {
+  width: 150px;
+}
+
+
+tr {
+  background-color: var(--rowColor);
+}
+
+th, td {
+  text-align: left;
+  border-radius: 5px;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+td {
+  font-size: 16pt;
+}
+
+.mastertable tr:hover {
+  background-color: var(--rowHoverColor);
+  color: var(--textHoverColor);
+  cursor: pointer;
+}
+
+#themebutton {
+  float: right;
+}

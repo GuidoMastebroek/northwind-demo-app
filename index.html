@@ -1,0 +1,70 @@
+<!--
+Oefenapplicatie Northwind API
+    Doel:   Ophalen en tonen van customer data van de Northwind API
+            (m.b.v. standaard HTML5, CSS en JavaScript)
+    Auteur: Guido Mastebroek
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>
+            Northwind oefenprogramma
+        </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Guido Mastebroek">
+        <meta name="description" content="Oefenprogramma met de Northwind API">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href=
+        "https://www.quinn-it.nl/wp-content/uploads/2023/10/quinn-it-removebg-preview2-150x150.png">
+    </head>
+
+    <body onload="getCustomerList(), loadTheme()">
+
+        <div class="topbar">
+            <img height="50px" alt="Quinn-IT logo" src=
+            "https://www.quinn-it.nl/wp-content/uploads/2023/10/quinn-it-removebg-preview2.png">
+            <img id="themebutton" src="moon.svg" onclick="switchTheme()">
+        </div>
+        <div class="masterviewbox">
+            <div class="masterheader" onclick="sortTable('customerlist')">
+                <h1>
+                    Northwind customers
+                </h1>
+            </div>
+            <div class="mastertablebox">
+                <table class="mastertable" id="customerlist">
+                    <tr><td><code>Data ophalen...</code></td></tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="detailviewbox">
+            <div class="detailheader">
+                <h1>
+                    Details
+                </h1>
+            </div>
+            <div>
+                <table class="detailtable">
+                    <tr>
+                        <th class="dtcolheader" id="companyname" colspan="2">--</th>
+                    </tr>
+                    <tr>
+                        <th class="dtrowheader" >Contact</th>
+                        <td id="contactname">--</td>
+                    </tr>
+                    <tr>
+                        <th class="dtrowheader">Title</th>
+                        <td id="contacttitle">--</td>
+                    </tr>
+                    <tr>
+                        <th class="dtrowheader">Address</th>
+                        <td id="address">--</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
